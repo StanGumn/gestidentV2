@@ -55,7 +55,7 @@ public class userLoginView implements Serializable {
         if(username != null && username.equals("admin") && password != null && password.equals("admin")) {
             loggedIn = true;
             message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome Admin", username);
-             ruta = MyUtil.basepathlogin()+"index.xhtml";
+             ruta = MyUtil.basepathlogin()+"faces/index.xhtml";
         
         } else if(username != null && username.equals("paciente") && password != null && password.equals("paciente")) {
             loggedIn = true;
