@@ -21,8 +21,6 @@ public class appBean {
      * Creates a new instance of appBean
      */
     public appBean() {
-        
-        
     }
     public String getBaseUrl(){
     return MyUtil.baseurl();
