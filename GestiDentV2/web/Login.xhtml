@@ -11,7 +11,7 @@ and open the template in the editor.
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Login</title>
-        <link href="#{appBean.baseUrl}resources/css/login.css" type="text/css" rel="stylesheet"/> 
+        <h:outputStylesheet name="css/login.css"/>
     </h:head>
     <h:body>
         <div class="conteiner">
@@ -45,10 +45,7 @@ and open the template in the editor.
                 
             }
             else {
-                PF('dlg').hide();
-              
-                
-                $('#loginLink').fadeOut();
+                location.href=args.ruta;
             }
         }
     </script>   

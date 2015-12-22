@@ -12,7 +12,11 @@ package com.ec.util;
 public class MyUtil {
     public static String baseurl()
     {
-        return "http://localhost:3306/script/";
+        return "http://localhost:8080/script/";
+    }
+     public static String basepathlogin()
+    {
+        return "/GestiDentV2/";
     }
     
 }

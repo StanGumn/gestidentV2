@@ -5,12 +5,14 @@
  */
 package com.ec.dao;
 
+import com.ec.entidades.Administrador;
+
 /**
  *
  * @author angel
  */
 public interface UsuarioDao {
-    public Usuario finByUsuario(Usuario usuario);
-           public Usuario login(); 
+    public Administrador finByUsuario(Administrador administrador);
+           public Administrador login(Administrador administrador); 
     
 }

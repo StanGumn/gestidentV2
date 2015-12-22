@@ -5,6 +5,7 @@
  */
 package com.ec.beans;
 
+import com.ec.util.MyUtil;
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
@@ -50,20 +51,30 @@ public class userLoginView implements Serializable {
         RequestContext context = RequestContext.getCurrentInstance();
         FacesMessage message = null;
         boolean loggedIn = false;
-         
+        String ruta ="";
         if(username != null && username.equals("admin") && password != null && password.equals("admin")) {
             loggedIn = true;
+            message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome Admin", username);
+             ruta = MyUtil.basepathlogin()+"index.xhtml";
+        
+        } else if(username != null && username.equals("paciente") && password != null && password.equals("paciente")) {
+            loggedIn = true;
+            message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome paciente", username);
+            // ruta = MyUtil.basepathlogin()+"/index.xhtml";
+        }else if(username != null && username.equals("doctor") && password != null && password.equals("doctor")) {
+            loggedIn = true;
             message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome", username);
-        } else {
+            // ruta = MyUtil.basepathlogin()+"/index.xhtml";      
+        }else {
             loggedIn = false;
             message = new FacesMessage(FacesMessage.SEVERITY_WARN, "Loggin Error", "Invalid credentials");
-        }
+        }  
          
         FacesContext.getCurrentInstance().addMessage(null, message);
         context.addCallbackParam("loggedIn", loggedIn);
+         context.addCallbackParam("ruta", ruta);
     }   
 
- 
 
 }
 
