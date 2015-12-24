@@ -17,13 +17,14 @@ and open the template in the editor.
         <div class="conteiner">
            
             <h:form id="formLogin">
+                
                 <h:outputLink value="javascript:void(0)" onclick="PF('dlg').show();" title="login"></h:outputLink>
                  <p:growl id="growl" showDetail="true" life="3000" />
   
-                <p:panel header="Ingresar Usuario y Clave" >
+                <p:panel header="Ingresar Usuario y Clave"  >
                             <h:panelGrid columns="2" cellpadding="5">
 
-                              <h:outputLabel for="username" value="Usuario:" />
+                              <h:outputLabel for="username" value="Cedula:" />
                               <p:inputText id="username" value="#{userLoginView.username}" required="true" label="username" />
 
                               <h:outputLabel for="password" value="Password:" />

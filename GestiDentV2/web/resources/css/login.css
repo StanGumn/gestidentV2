@@ -8,7 +8,8 @@ and open the template in the editor.
     Author     : angel
 */
 body{
-    background-color: #ece3a5;
+    background-image: url("fondo.jpg");
+    
 }
 .conteiner{
     width: 350px;

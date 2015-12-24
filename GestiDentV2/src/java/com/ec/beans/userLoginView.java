@@ -52,7 +52,7 @@ public class userLoginView implements Serializable {
         FacesMessage message = null;
         boolean loggedIn = false;
         String ruta ="";
-        if(username != null && username.equals("admin") && password != null && password.equals("admin")) {
+        if(username != null && username.equals("1720478822") && password != null && password.equals("admin")) {
             loggedIn = true;
             message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Welcome Admin", username);
              ruta = MyUtil.basepathlogin()+"faces/index.xhtml";
